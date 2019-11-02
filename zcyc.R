@@ -15,7 +15,6 @@ for(i in 1:length(dates)){
  data = read_html(di) %>% html_nodes("table") %>% html_nodes("td") %>% html_text()
  if(data[1]==dates[i]){
   mat[i,] = data[1:13]
-  #data.frame(matrix(data[1:13], ncol=13, byrow=TRUE))
  }else{
     i=i
  }
