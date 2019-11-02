@@ -7,7 +7,6 @@ yields = function(Initial_Date,Final_Date){
  suppressMessages(library(httr))
  suppressMessages(library(functional))
  suppressMessages(library(xts))
-
 dates = format(seq(as.Date(Initial_Date), as.Date(Final_Date), 'day'), format="%d/%m/%Y", tz="UTC")
 mat = matrix(NA,length(dates),(length(Maturities)+1))
 # Scraping
@@ -21,7 +20,6 @@ for(i in 1:length(dates)){
     i=i
  }
  pb = txtProgressBar(min = (1/length(dates)), max = length(dates), style = 3)
-
  setTxtProgressBar(pb,i)
 }
 mat = na.omit(mat)
