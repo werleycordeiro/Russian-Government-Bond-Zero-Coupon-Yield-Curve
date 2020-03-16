@@ -1,3 +1,6 @@
+# Author: Werley Cordeiro
+# werleycordeiro@gmail.com
+
 yields = function(Initial_Date,Final_Date){
 # Packages
  packages = c("rvest","httr","functional","xts")
